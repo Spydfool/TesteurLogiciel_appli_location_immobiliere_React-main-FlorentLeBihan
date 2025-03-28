@@ -1,0 +1,69 @@
+/* Styles globaux */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Header */
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+header nav a {
+  margin: 0 1rem;
+  color: white;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* Layout */
+main {
+  padding: 2rem;
+  min-height: calc(100vh - 120px); /* Ajuste pour inclure header et footer */
+}
+
+/* Page spécifique */
+.home {
+  text-align: center;
+}
+
+.error404 {
+  text-align: center;
+  color: red;
+}
+
+.property {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+}
