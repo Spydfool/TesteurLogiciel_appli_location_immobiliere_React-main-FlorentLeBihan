@@ -1,14 +1,11 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import Header from './Header';
+import '../styles.css';
 
 function Layout({ children }) {
   return (
     <>
-      <header>
-        <nav>
-          <NavLink to="/">Accueil</NavLink>
-        </nav>
-      </header>
+      <Header /> {}
       <main>{children}</main>
       <footer>
         <p>© 2020 Kasa</p>
