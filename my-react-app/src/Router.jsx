@@ -1,10 +1,10 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import Property from './pages/Property';
-import Error404 from './pages/Error404';
-import Layout from './components/Layout';
-import About from './pages/About';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Property from "./pages/Property";
+import Error404 from "./pages/Error404";
+import Layout from "./components/Layout";
 
 function AppRouter() {
   return (
@@ -14,6 +14,7 @@ function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/property/:id" element={<Property />} />
+          {/* Route pour les pages inexistantes */}
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Layout>

@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from 'react';
-import Card from '../components/Card';
-import backgroundImage from '../assets/background-home.png';
-import '../styles.css';
+import React, { useEffect, useState } from "react";
+import Card from "../components/Card";
+import backgroundImage from "../assets/background-home.png";
+import "../styles.css";
 
 function Home() {
   const [logements, setLogements] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/properties')
+    fetch("http://localhost:8080/api/properties")
       .then((response) => {
         if (!response.ok) {
-          throw new Error('Erreur lors de la récupération des logements');
+          throw new Error("Erreur lors de la récupération des logements");
         }
         return response.json();
       })
