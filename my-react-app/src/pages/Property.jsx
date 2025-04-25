@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Slideshow from "../components/Slideshow";
+import Collapse from "../components/Collapse";
 import "../styles.css";
 
 function Property() {
@@ -70,9 +71,9 @@ function Property() {
         <div className="property-host">
           <div className="host-info">
             <p className="host-name">
-              {property.host.name.split(" ")[0]} {}
+              {property.host.name.split(" ")[0]}
               <br />
-              {property.host.name.split(" ")[1]} {}
+              {property.host.name.split(" ")[1]}
             </p>
             <img
               src={property.host.picture}
@@ -81,10 +82,22 @@ function Property() {
             />
           </div>
           <div className="property-rating">
-            <div className="stars-container">
-              {renderStars(property.rating)}
-            </div>
+            <div className="stars-container">{renderStars(property.rating)}</div>
           </div>
+        </div>
+      </div>
+
+      {/* Collapses for description and equipment */}
+      <div className="property-collapses">
+        <div className="property-collapse">
+          <Collapse title="Description">{property.description}</Collapse>
+        </div>
+        <div className="property-collapse">
+          <Collapse title="Équipements">
+            {property.equipments.map((equipment, index) => (
+              <div key={index}>{equipment}</div>
+            ))}
+          </Collapse>
         </div>
       </div>
     </div>

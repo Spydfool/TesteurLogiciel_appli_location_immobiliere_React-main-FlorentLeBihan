@@ -4,7 +4,6 @@
 body {
   margin: 0;
   font-family: "Montserrat";
-  color: #333;
 }
 
 h1,
@@ -87,7 +86,7 @@ header nav a {
 }
 
 .property-info {
-  max-width: 70%;
+  max-width: 100%;
 }
 
 .property-title {
@@ -148,6 +147,19 @@ header nav a {
   gap: 15px;
 }
 
+.property-collapses {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 20px;
+  gap: 80px;
+}
+
+.property-collapse {
+  flex: 1;
+  max-width: 582px;
+}
+
 /* Page spécifique - Home */
 .hero {
   position: relative;
@@ -189,7 +201,6 @@ header nav a {
 .cards-wrapper {
   background-color: #f6f6f6;
   border-radius: 15px;
-  padding: 30px;
   max-width: 1240px;
   margin: auto;
   margin-top: 50px;
@@ -197,20 +208,23 @@ header nav a {
 }
 
 .cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 30px;
   margin: auto;
+  padding: 50px;
 }
 
 /* Composant - Card */
 .card {
+  flex: 1 1 calc(33.33% - 30px);
+  max-width: calc(33.33% - 30px);
   display: block;
   text-decoration: none;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-  max-width: 340px;
   height: 340px;
   transition: transform 0.2s;
 }
@@ -273,11 +287,12 @@ footer {
   align-items: center;
   background-color: #ff6060;
   color: white;
-  padding: 15px;
+  padding: 10px;
   font-weight: bold;
-  margin: 5px 100px;
+  max-width: 900px;
+  margin: 5px auto;
   border-radius: 5px;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .collapse-toggle {
@@ -299,8 +314,9 @@ footer {
   overflow: hidden;
   background-color: #f6f6f6;
   transition: max-height 0.3s ease;
-  margin: 0px 100px;
+  margin: auto;
   border-radius: 5px;
+  max-width: 920px;
 }
 
 .collapse-text {
@@ -342,7 +358,7 @@ footer {
 }
 
 .error404-code {
-  font-size: 288px;
+  font-size: 270px;
   color: #ff6060;
   margin: 0;
 }
@@ -358,6 +374,7 @@ footer {
   color: black;
   text-decoration: underline;
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 
 /* Slideshow styles */
@@ -430,4 +447,166 @@ footer {
   font-size: 16px;
   font-weight: bold;
   left: 50%;
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .cards-container {
+    justify-content: center;
+  }
+  .card {
+    flex: 1 1 calc(50% - 30px);
+    max-width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .logo svg {
+    height: 40px;
+    width: 140px;
+  }
+  .nav-link {
+    font-size: 12px;
+  }
+
+  header nav a {
+    margin: 0;
+  }
+
+  .hero {
+    height: 110px;
+    font-size: 12px;
+    text-align: left;
+    padding: 10px;
+  }
+
+  .cards-wrapper {
+    background-color: white;
+  }
+
+  .cards-container {
+    justify-content: center;
+    gap: 10px;
+    padding: 0;
+  }
+  .card {
+    flex: 1 1 calc(100% - 30px);
+    max-width: calc(100% - 30px);
+    height: 200px;
+  }
+
+  .slideshow {
+    height: 250px;
+  }
+
+  .slideshow-counter {
+    display: none;
+  }
+
+  .slideshow-arrow {
+    font-size: 25px;
+  }
+
+  .property-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .property-title {
+    font-size: 20px;
+  }
+
+  .property-location {
+    font-size: 14px;
+    margin: 10px 0;
+  }
+
+  .property-info {
+    width: 100%;
+  }
+
+  .property-tags {
+    justify-content: flex-start;
+    gap: 5px;
+  }
+
+  .property-tag {
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 5px;
+  }
+
+  .property-rating {
+    justify-content: flex-start;
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .stars-container {
+    gap: 5px;
+  }
+
+  .stars-container svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .property-host {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+  }
+
+  .host-name {
+    font-size: 14px;
+  }
+
+  .host-picture {
+    width: 48px;
+    height: 48px;
+  }
+  .property-collapses {
+    flex-direction: column;
+    gap: 0px;
+    margin-top: 15px;
+  }
+
+  .collapse-header {
+    font-size: 13px;
+    padding: 8px;
+    height: 20px;
+    margin-bottom: 0;
+  }
+
+  .property-collapse {
+    max-width: 100%;
+  }
+  
+  .collapse-content {
+    font-size: 14px;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+
+  .about-hero {
+    height: 110px;
+  }
+
+  .error404-code {
+    font-size: 96px;
+  }
+
+  .error404-message {
+    font-size: 18px;
+    margin: 60px 0 0;
+  }
+
+  .error404-link {
+    font-size: 14px;
+  }
 }
