@@ -38,7 +38,7 @@ function Property() {
 
     return Array.from({ length: totalStars }, (_, index) => (
       <svg
-        key={index} // Ajout d'une clé unique pour chaque étoile
+        key={index}
         width="25"
         height="24"
         viewBox="0 0 25 24"
@@ -82,12 +82,14 @@ function Property() {
             />
           </div>
           <div className="property-rating">
-            <div className="stars-container">{renderStars(property.rating)}</div>
+            <div className="stars-container">
+              {renderStars(property.rating)}
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Collapses for description and equipment */}
+      {}
       <div className="property-collapses">
         <div className="property-collapse">
           <Collapse title="Description">{property.description}</Collapse>

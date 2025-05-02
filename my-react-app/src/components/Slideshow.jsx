@@ -20,11 +20,19 @@ function Slideshow({ pictures }) {
     <div className="slideshow">
       {pictures.length > 1 && (
         <>
-          <button className="slideshow-arrow left" onClick={handlePrev}>
-            &#10094;
+          <button
+            className="slideshow-arrow right"
+            onClick={handleNext}
+            aria-label="Next"
+          >
+            ❯
           </button>
-          <button className="slideshow-arrow right" onClick={handleNext}>
-            &#10095;
+          <button
+            className="slideshow-arrow left"
+            onClick={handlePrev}
+            aria-label="Previous"
+          >
+            ❮
           </button>
         </>
       )}

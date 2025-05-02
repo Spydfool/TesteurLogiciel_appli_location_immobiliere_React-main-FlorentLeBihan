@@ -14,7 +14,7 @@ function AppRouter() {
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/property/:id" element={<Property />} />
-          {/* Route pour les pages inexistantes */}
+          {}
           <Route path="*" element={<Error404 />} />
         </Routes>
       </Layout>
