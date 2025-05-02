@@ -211,7 +211,7 @@ header nav a {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  gap: 30px;
+  gap: 45px;
   margin: auto;
   padding: 50px;
 }
@@ -595,6 +595,7 @@ footer {
 
   .about-hero {
     height: 110px;
+    border-radius: 10px;
   }
 
   .error404-code {
