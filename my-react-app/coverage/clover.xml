@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1746187833270" clover="3.2.0">
-  <project timestamp="1746187833271" name="All files">
+<coverage generated="1746537087989" clover="3.2.0">
+  <project timestamp="1746537087989" name="All files">
     <metrics statements="9" coveredstatements="9" conditionals="8" coveredconditionals="6" methods="6" coveredmethods="6" elements="23" coveredelements="21" complexity="0" loc="9" ncloc="9" packages="1" files="2" classes="2"/>
     <file name="Card.jsx" path="C:\Users\fl\Documents\p8\TesteurLogiciel_appli_location_immobiliere_React-main-FlorentLeBihan\my-react-app\src\components\Card.jsx">
       <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>

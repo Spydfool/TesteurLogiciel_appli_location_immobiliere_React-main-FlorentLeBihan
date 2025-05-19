@@ -1,4 +1,3 @@
-import React from "react";
 import Collapse from "../components/Collapse";
 import "../styles.css";
 import backgroundImage from "../assets/background-about.png";
