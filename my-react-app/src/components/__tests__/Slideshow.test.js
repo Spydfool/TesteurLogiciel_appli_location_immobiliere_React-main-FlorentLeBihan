@@ -1,3 +1,4 @@
+import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import Slideshow from "../Slideshow";
 import { describe, test, expect } from "@jest/globals";

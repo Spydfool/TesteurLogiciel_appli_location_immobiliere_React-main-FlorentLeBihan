@@ -10,30 +10,22 @@ function Home() {
   useEffect(() => {
     fetch("http://localhost:8080/api/properties")
       .then((response) => {
-        if (!response.ok) {
+        if (!response.ok)
           throw new Error("Erreur lors de la récupération des logements");
-        }
         return response.json();
       })
-      .then((data) => setLogements(data))
+      .then(setLogements)
       .catch((err) => setError(err.message));
   }, []);
 
-  if (error) {
-    return <p>{error}</p>;
-  }
-
-  if (logements.length === 0) {
-    return <p>Chargement...</p>;
-  }
+  if (error) return <p>{error}</p>;
+  if (!logements.length) return <p>Chargement...</p>;
 
   return (
     <div className="home">
       <div
         className="hero"
-        style={{
-          backgroundImage: `url(${backgroundImage})`,
-        }}
+        style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <h1>Chez vous, partout et ailleurs</h1>
       </div>
